@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Facebook f logo -->
+    <path
+        android:fillColor="#3b5998"
+        android:pathData="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15h-2v-3h2V9.5c0-2.24 1.79-4.04 4-4.04h3v3h-2c-.55 0-1 .45-1 1V12h3.5l-.5 3H14v6.79c4.56-.93 8-4.96 8-9.8z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M15 15h2v-3h-2V9.5c0-.55-.45-1-1-1h-2V12h-2v3h2v6.79c4.56-.93 8-4.96 8-9.8s-3.44-8.87-8-9.8V5.46c2.81.93 5 3.51 5 6.54s-2.19 5.61-5 6.54V15h2z" />
+</vector>

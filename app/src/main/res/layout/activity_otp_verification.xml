@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="24dp"
+    tools:context="com.example.chargeeasy.OtpVerificationActivity">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableTop="@drawable/ic_lock"
+        android:drawablePadding="24dp"
+        android:text="OTP code verification"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+    <TextView
+        android:id="@+id/tv_phone_number_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="We have sent an OTP code to phone number ••••••••••99. Enter the OTP code below to sign in."
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_otp" />
+
+    <LinearLayout
+        android:id="@+id/ll_otp_inputs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_phone_number_display">
+
+        <EditText
+            android:id="@+id/et_otp1"
+            style="@style/OtpInputStyle"
+            android:textAlignment="center"
+            android:background="@drawable/otp_box_style"
+            android:imeOptions="actionNext"
+            tools:text="1" />
+        <EditText
+            android:id="@+id/et_otp2"
+            style="@style/OtpInputStyle"
+            android:textAlignment="center"
+            android:background="@drawable/otp_box_style"
+            android:imeOptions="actionNext"
+            tools:text="2" />
+        <EditText
+            android:id="@+id/et_otp3"
+            style="@style/OtpInputStyle"
+            android:textAlignment="center"
+            android:background="@drawable/otp_box_style"
+            android:imeOptions="actionNext"
+            tools:text="3" />
+        <EditText
+            android:id="@+id/et_otp4"
+            style="@style/OtpInputStyle"
+            android:textAlignment="center"
+            android:background="@drawable/otp_box_style"
+            android:imeOptions="actionDone"
+            tools:text="4" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_resend_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="You can resend code in 55 s"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_otp_inputs"
+        tools:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/tv_resend_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="onResendCodeClick"
+        android:text="Resend Code"
+        android:textColor="@color/green_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_otp_inputs" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

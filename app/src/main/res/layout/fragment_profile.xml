@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.example.chargeeasy.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp">
+
+            <!-- Title Bar -->
+            <TextView
+                android:id="@+id/tv_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Profile"
+                android:textColor="@android:color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Profile Picture & Name Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_profile_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_header">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Profile Image (Uses circular_background_green) -->
+                    <ImageView
+                        android:id="@+id/iv_profile_photo"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/circular_background_green"
+                        android:padding="16dp"
+                        android:src="@drawable/ic_profile_placeholder"
+                        android:contentDescription="User Profile Picture" />
+
+                    <!-- User Name -->
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:text="John Doe (Jane)"
+                        android:textColor="@android:color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!-- User Contact -->
+                    <TextView
+                        android:id="@+id/tv_user_contact"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="+91 98765 43210"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+
+                    <!-- User Email -->
+                    <TextView
+                        android:id="@+id/tv_user_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="john.doe@gmail.com"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- General Settings Section Header -->
+            <TextView
+                android:id="@+id/tv_settings_label"
+                style="@style/ProfileHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="General"
+                app:layout_constraintTop_toBottomOf="@+id/cv_profile_card" />
+
+            <!-- App Settings Item -->
+            <TextView
+                android:id="@+id/tv_settings"
+                style="@style/ProfileListItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_settings"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:text="App Settings"
+                app:layout_constraintTop_toBottomOf="@+id/tv_settings_label" />
+
+            <!-- Security Section Header -->
+            <TextView
+                android:id="@+id/tv_security_label"
+                style="@style/ProfileHeaderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Security &amp; Logout"
+                app:layout_constraintTop_toBottomOf="@+id/tv_settings" />
+
+            <!-- Logout Item -->
+            <TextView
+                android:id="@+id/tv_logout"
+                style="@style/ProfileListItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_logout"
+                android:drawableEnd="@drawable/ic_arrow_forward"
+                android:text="Log Out"
+                android:textColor="@color/green_primary"
+                app:layout_constraintTop_toBottomOf="@+id/tv_security_label" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

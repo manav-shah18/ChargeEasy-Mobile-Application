@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="16dp"
+    tools:context="com.example.chargeeasy.LoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_illustration_login"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ce2"
+        app:layout_constraintBottom_toTopOf="@+id/tv_greeting"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintWidth_percent="0.6"
+        android:contentDescription="Login illustration" />
+
+    <TextView
+        android:id="@+id/tv_greeting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Let's you in"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ll_social_buttons"
+        app:layout_constraintTop_toBottomOf="@+id/iv_illustration_login"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_social_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tv_or"
+        app:layout_constraintTop_toBottomOf="@+id/tv_greeting">
+
+        <Button
+            android:id="@+id/btn_google"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_border_light"
+            android:drawableLeft="@drawable/ic_google"
+            android:drawablePadding="24dp"
+            android:gravity="center_vertical"
+            android:onClick="onGoogleSigninClick"
+            android:paddingStart="16dp"
+            android:text="Continue with Google"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_facebook"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_border_light"
+            android:text="Continue with Facebook"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:paddingStart="16dp"
+            android:drawablePadding="24dp"
+            android:gravity="center_vertical"
+            android:onClick="onFacebookSigninClick"/>
+
+        <Button
+            android:id="@+id/btn_apple"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/button_border_light"
+            android:text="Continue with Apple"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/ic_apple"
+            android:paddingStart="16dp"
+            android:drawablePadding="24dp"
+            android:gravity="center_vertical"
+            android:onClick="onAppleSigninClick"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="or"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintBottom_toTopOf="@+id/btn_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/ll_social_buttons"/>
+
+    <Button
+        android:id="@+id/btn_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/green_primary"
+        android:text="Sign in with Phone Number"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_signup_link"
+        app:layout_constraintTop_toBottomOf="@+id/tv_or"
+        android:onClick="onPhoneSigninClick"/>
+
+    <LinearLayout
+        android:id="@+id/ll_signup_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_phone_number">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account?"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_signup_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Sign up"
+            android:textColor="@color/green_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:onClick="onSignUpClick"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

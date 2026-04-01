@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="24dp"
+    tools:context=".SupportFragment">
+
+    <!-- Title Bar -->
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Help &amp; Support"
+        android:textColor="@android:color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Self-Help Section Header -->
+    <TextView
+        android:id="@+id/tv_self_help_label"
+        style="@style/ProfileHeaderStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Self-Help Resources"
+        app:layout_constraintTop_toBottomOf="@+id/tv_header" />
+
+    <!-- FAQ Item -->
+    <TextView
+        android:id="@+id/tv_faq"
+        style="@style/ProfileListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_faq"
+        android:drawableEnd="@drawable/ic_arrow_forward"
+        android:text="Frequently Asked Questions"
+        app:layout_constraintTop_toBottomOf="@+id/tv_self_help_label" />
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintTop_toBottomOf="@+id/tv_faq" />
+
+    <!-- Contact Section Header -->
+    <TextView
+        android:id="@+id/tv_contact_label"
+        style="@style/ProfileHeaderStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Contact Us"
+        app:layout_constraintTop_toBottomOf="@+id/divider_1" />
+
+    <!-- Call Support Item -->
+    <TextView
+        android:id="@+id/tv_call_support"
+        style="@style/ProfileListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawableEnd="@drawable/ic_arrow_forward"
+        android:text="Call Customer Support"
+        app:layout_constraintTop_toBottomOf="@+id/tv_contact_label" />
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"
+        app:layout_constraintTop_toBottomOf="@+id/tv_call_support" />
+
+    <!-- Email Support Item -->
+    <TextView
+        android:id="@+id/tv_email_support"
+        style="@style/ProfileListItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_email"
+        android:drawableEnd="@drawable/ic_arrow_forward"
+        android:text="Email Support"
+        app:layout_constraintTop_toBottomOf="@+id/divider_2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
