@@ -47,7 +47,7 @@ ChargeEasy is a full-stack Android application designed to simplify electric veh
 1. Clone the repository:
 
    ```
-   git clone https://github.com/manav-shah18/chargeeasy-android-app.git
+   git clone https://github.com/manav-shah18/ChargeEasy-Mobile-Application.git
    ```
 
 2. Open the project in Android Studio
